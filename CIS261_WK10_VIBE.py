@@ -120,12 +120,10 @@ def display_class_statistics(students):
     if len(students) == 0:
         print("\nNo student records available.")
         return
-
+    
     averages = []
-
     for student in students:
-        averages.append(student.average)
-
+            averages.append(student.average)
     highest_average = max(averages)
     lowest_average = min(averages)
     class_average = sum(averages) / len(averages)
@@ -133,7 +131,6 @@ def display_class_statistics(students):
     print("\n" + "=" * 40)
     print("CLASS STATISTICS")
     print("=" * 40)
-
     print(f"Highest Average: {highest_average:.2f}")
     print(f"Lowest Average:  {lowest_average:.2f}")
     print(f"Class Average:   {class_average:.2f}")
@@ -229,9 +226,13 @@ def main():
 
         elif choice == "2":
             display_all_students(students)
+            input("\nPress Enter to return to the menu...")
 
         elif choice == "3":
             display_class_statistics(students)
+            input("\nPress Enter to return to the menu...")
+            
+
 
         elif choice == "4":
             search_student(students)
